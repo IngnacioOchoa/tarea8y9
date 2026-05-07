@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `db_escuela` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `db_escuela`;
 -- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_escuela
@@ -36,7 +34,7 @@ CREATE TABLE `estudiantes` (
   PRIMARY KEY (`id_estudiante`),
   KEY `fk_id_tipo_sangre_estudiante_tipo_sangre_idx` (`id_tipo_sangre`),
   CONSTRAINT `fk_id_tipo_sangre_estudiante_tipo_sangre` FOREIGN KEY (`id_tipo_sangre`) REFERENCES `tipo_sangre` (`id_tipo_sangre`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +43,7 @@ CREATE TABLE `estudiantes` (
 
 LOCK TABLES `estudiantes` WRITE;
 /*!40000 ALTER TABLE `estudiantes` DISABLE KEYS */;
-INSERT INTO `estudiantes` VALUES (1,'E001','Jose Luis ','Perez Lopez','Guatemala',325555,'1990-01-22',1),(2,'E002','Ana Luisa','Toc Pop','Xela',222,'1998-01-25',2),(3,'E003','gAL GAL','cOL GOL','gUATE',5555,'1990-01-12',1),(4,'E004','Juana Jolo','Jolon Jal','Quiche',44444,'2001-01-01',1);
+INSERT INTO `estudiantes` VALUES (1,'E001','Jose Luis ','Perez Lopez','Guatemala',325555,'1990-01-22',1),(2,'E002','Ana Luisa','Toc Pop','Xela',222,'1998-01-25',2),(3,'E003','Benito Mario','Ramirez Pec','Guatemala',8895,'1990-01-12',1),(4,'E004','don pepito','tizcon pol','eeuu',8877,'2001-01-01',1),(16,'E006','Ed Mundo','Ran Rin','Chiquimula',89244,'1990-01-01',2),(17,'E005','IGNACIO ALEJANDRO	','CANO NEYMAR','CHINAUTLA',2115,'2005-01-02',1);
 /*!40000 ALTER TABLE `estudiantes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-05 22:30:13
+-- Dump completed on 2026-05-06 22:41:45
